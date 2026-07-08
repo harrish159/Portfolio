@@ -8,6 +8,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      const a = 10;
       const sections = ['home', 'about', 'skills', 'projects', 'education', 'contact'];
       const scrollPosition = window.scrollY + 120;
       for (const section of sections) {
