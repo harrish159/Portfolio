@@ -10,7 +10,7 @@ const fadeUp = (i = 0) => ({
 });
 
 const Education = () => (
-  <section id="education" className="py-28 px-6 bg-[#090909]">
+  <section id="education" className="py-16 md:py-28 px-6 bg-[#090909]">
     <div className="max-w-[1200px] mx-auto">
       <motion.div {...fadeUp(0)} className="mb-16">
         <p className="text-[#84CC16] text-xs font-semibold uppercase tracking-widest mb-3">Background</p>
@@ -24,10 +24,10 @@ const Education = () => (
 
         <motion.div {...fadeUp(1)} className="relative">
           {/* Dot */}
-          <div className="absolute -left-8 md:-left-12 top-6 w-4 h-4 rounded-full bg-[#84CC16] border-4 border-[#090909] shadow-[0_0_10px_rgba(132,204,22,0.4)]" />
+          <div className="absolute -left-7 md:-left-9 top-6 w-4 h-4 rounded-full bg-[#84CC16] border-4 border-[#090909] shadow-[0_0_10px_rgba(132,204,22,0.4)]" />
 
           {/* Card */}
-          <div className="p-6 md:p-8 rounded-[18px] bg-[#111111] border border-white/[0.07] hover:border-[#84CC16]/25 transition-all duration-300">
+          <div className="p-5 sm:p-6 md:p-8 rounded-[18px] bg-[#111111] border border-white/[0.07] hover:border-[#84CC16]/25 transition-all duration-300">
             {/* Top Row */}
             <div className="flex flex-wrap justify-between items-start gap-4 mb-6">
               <span className="px-3 py-1 rounded-full text-[10px] font-semibold bg-[#84CC16]/10 text-[#84CC16] border border-[#84CC16]/20 uppercase tracking-wider">

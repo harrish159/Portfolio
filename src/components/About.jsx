@@ -27,7 +27,7 @@ const skills = [
 ];
 
 const About = () => (
-  <section id="about" className="py-28 px-6 bg-[#111111]">
+  <section id="about" className="py-16 md:py-28 px-6 bg-[#111111]">
     <div className="max-w-[1200px] mx-auto">
       <motion.div {...fadeUp(0)} className="mb-16">
         <p className="text-[#84CC16] text-xs font-semibold uppercase tracking-widest mb-3">
@@ -48,7 +48,7 @@ const About = () => (
         <div className="flex flex-col justify-center">
           <motion.div
             {...fadeUp(1)}
-            className="relative lg:max-w-[420px] lg:mx-auto w-full"
+            className="relative max-w-[420px] mx-auto w-full"
           >
             <div className="absolute -inset-3 rounded-3xl bg-[#84CC16]/6 blur-2xl pointer-events-none" />
 

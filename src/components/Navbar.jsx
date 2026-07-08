@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,23 +89,31 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-[#111111] border-t border-white/[0.06] px-6 py-4 flex flex-col gap-4">
-          {navItems.map((item) => (
-            <a
-              key={item.target}
-              href={`#${item.target}`}
-              onClick={() => setMenuOpen(false)}
-              className={`text-sm font-medium transition-colors ${activeSection === item.target ? 'text-[#84CC16]' : 'text-[#A1A1AA]'}`}
-            >
-              {item.label}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="md:hidden bg-[#111111] border-t border-white/[0.06] px-6 py-4 flex flex-col gap-4 overflow-hidden"
+          >
+            {navItems.map((item) => (
+              <a
+                key={item.target}
+                href={`#${item.target}`}
+                onClick={() => setMenuOpen(false)}
+                className={`text-sm font-medium transition-colors ${activeSection === item.target ? 'text-[#84CC16]' : 'text-[#A1A1AA]'}`}
+              >
+                {item.label}
+              </a>
+            ))}
+            <a href="https://drive.google.com/file/d/1PGRj_snV-sFHyvhWjTMJnrBSYl7r0pRh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="mt-2 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-white text-center hover:bg-[#84CC16] hover:text-black transition-all duration-300">
+              Resume
             </a>
-          ))}
-          <a href="https://drive.google.com/file/d/1PGRj_snV-sFHyvhWjTMJnrBSYl7r0pRh/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="mt-2 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider border border-white/10 bg-white/5 text-white text-center hover:bg-[#84CC16] hover:text-black transition-all duration-300">
-            Resume
-          </a>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

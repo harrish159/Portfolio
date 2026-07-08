@@ -43,7 +43,7 @@ const projects = [
 ];
 
 const Projects = () => (
-  <section id="projects" className="py-28 px-6 bg-[#111111]">
+  <section id="projects" className="py-16 md:py-28 px-6 bg-[#111111]">
     <div className="max-w-[1200px] mx-auto">
       <motion.div {...fadeUp(0)} className="mb-16">
         <p className="text-[#84CC16] text-xs font-semibold uppercase tracking-widest mb-3">Work</p>

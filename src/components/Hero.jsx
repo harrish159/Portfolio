@@ -271,7 +271,7 @@ const Hero = () => {
 
             <motion.h1
               {...fadeUp(0.2)}
-              className="font-poppins text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-bold leading-none tracking-tight text-white"
+              className="font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] font-bold leading-none tracking-tight text-white"
             >
               HARRISH
               <br />
@@ -362,7 +362,7 @@ const Hero = () => {
               ))}
             </motion.div>
 
-            <div className="grid grid-cols-4 gap-3 mt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2">
               <StatCard value="8.43" label="CGPA" delay={0.5} />
               <StatCard value="3+" label="Projects" delay={0.55} />
               <StatCard value="2027" label="Grad Year" delay={0.6} />
@@ -371,7 +371,7 @@ const Hero = () => {
           </div>
 
           {/* ── RIGHT: layered workspace composition ── */}
-          <div className="pt-6 lg:pt-0">
+          <div className="hidden lg:block pt-6 lg:pt-0">
             <WorkspaceComposition />
           </div>
         </div>
